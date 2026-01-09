@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
+/* ယခင်က CSS တွေကို အတူတူထားပါ */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 body{
   background:linear-gradient(135deg,#f9957f,#f2f5d0);
@@ -35,6 +36,10 @@ header{position:sticky;top:0;z-index:999;padding:10px}
   text-decoration:none;
   color:#111;
   font-weight:500;
+  transition: color 0.3s;
+}
+.nav-left a:hover{
+  color: #f048c6;
 }
 .logo{font-size:16px;font-weight:700}
 .sign-btn{
@@ -46,8 +51,8 @@ header{position:sticky;top:0;z-index:999;padding:10px}
   text-decoration:none;
 }
 
-/* GES text in header - right side */
-.ges-header {
+/* TED text in header - right side */
+.ted-header {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 24px;
   font-weight: 800;
@@ -85,7 +90,7 @@ header{position:sticky;top:0;z-index:999;padding:10px}
 .shop{background:#111;color:#fff}
 .explore{background:#fff}
 
-/* HERO IMAGE - အလယ်ခါးလောက်မှာထားမယ် */
+/* HERO IMAGE */
 .hero-img-container {
   margin: 40px auto 20px;
   width: 100%;
@@ -95,7 +100,7 @@ header{position:sticky;top:0;z-index:999;padding:10px}
 
 .hero-img {
   margin: 0 auto;
-  width: 400px; /* သင့်linkထဲကလိုမျိုး အလယ်ခါးလောက်မှာထားမယ် */
+  width: 400px;
   max-width: 90%;
 }
 
@@ -239,7 +244,7 @@ header{position:sticky;top:0;z-index:999;padding:10px}
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #f9957f;
+  border-color: #f048c6;
   outline: none;
 }
 
@@ -248,56 +253,60 @@ header{position:sticky;top:0;z-index:999;padding:10px}
   resize: vertical;
 }
 
-/* File upload styles */
-.file-upload-container {
-  border: 2px dashed #ddd;
-  border-radius: 8px;
-  padding: 25px;
-  text-align: center;
-  transition: border 0.3s;
-  cursor: pointer;
+/* NEW: Email field ထည့်ထားတယ် */
+.email-container {
   background: #f9f9f9;
-}
-
-.file-upload-container:hover {
-  border-color: #f9957f;
-}
-
-.file-upload-container.dragover {
-  border-color: #f9957f;
-  background: rgba(249, 149, 127, 0.1);
-}
-
-.file-upload-icon {
-  font-size: 40px;
-  color: #f9957f;
-  margin-bottom: 10px;
-}
-
-.file-upload-text {
-  margin-bottom: 10px;
-  color: #555;
-}
-
-.file-upload-btn {
-  background: #111;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 5px;
-  display: inline-block;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-#fileName {
+  border-radius: 8px;
+  padding: 15px;
   margin-top: 10px;
-  font-size: 14px;
-  color: #333;
-  font-weight: 500;
+  border: 1px solid #ddd;
 }
 
-#fileInput {
-  display: none;
+.email-container label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+.email-note {
+  font-size: 12px;
+  color: #666;
+  margin-top: 8px;
+  padding: 8px;
+  background: #fff;
+  border-radius: 5px;
+  border-left: 3px solid #f048c6;
+}
+
+/* Kpay Transaction Number field */
+.kpay-transaction-container {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+}
+
+.kpay-transaction-container label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+.kpay-note {
+  font-size: 12px;
+  color: #666;
+  margin-top: 8px;
+  padding: 8px;
+  background: #fff;
+  border-radius: 5px;
+  border-left: 3px solid #f048c6;
 }
 
 .submit-btn {
@@ -429,7 +438,7 @@ header{position:sticky;top:0;z-index:999;padding:10px}
   .nav-left a,.sign-btn{font-size:14px}
   .logo{font-size:20px}
   .hero-img{width:450px}
-  .ges-header {font-size: 28px;}
+  .ted-header {font-size: 28px;}
 }
 
 @media(max-width:480px){
@@ -442,20 +451,18 @@ header{position:sticky;top:0;z-index:999;padding:10px}
 <header>
   <div class="nav-box">
     <div class="nav-left">
-      <a href="#">Telegram</a>
-      <a href="#">Email</a>
-      <a href="#">TikTok</a>
+      <a href="https://www.tiktok.com/@teddy1e?_r=1&_t=ZS-92vi2jbwEMe" target="_blank">TikTok</a>
+      <a href="mailto:founderbylin@gmail.com">Email</a>
     </div>
-    <!-- Removed center GES, only one on the right side -->
     <div class="nav-right">
-      <div class="ges-header">GES</div>
+      <div class="ted-header">TED</div>
     </div>
   </div>
 </header>
 
 <section class="hero">
-  <h1>Where vision meets value </h1>
-  <p>Contect Video,Poster,Vinyl,LoGo</p>
+  <h1>Where vision meets value</h1>
+  <p>Content Video, Poster, Vinyl, Logo</p>
   <div class="actions">
     <button class="shop" onclick="openPortal()">Shop Now</button>
     <button class="explore" onclick="showProducts()">Explore All</button>
@@ -463,9 +470,7 @@ header{position:sticky;top:0;z-index:999;padding:10px}
 
   <div class="hero-img-container">
     <div class="hero-img">
-      <!-- ww.jpg ပုံထည့်ထားတယ် -->
-      <img src="ww.jpg" alt="Editting Video" 
-           id="mainImage">
+      <img src="ww.jpg" alt="Editing Video" id="mainImage">
     </div>
   </div>
 </section>
@@ -501,6 +506,21 @@ header{position:sticky;top:0;z-index:999;padding:10px}
       <input type="text" id="name" placeholder="Enter your full name">
     </div>
     
+    <!-- NEW: Email field ထည့်ထားတယ် -->
+    <div class="form-group">
+      <label>Email Address (Required)</label>
+      <div class="email-container">
+        <label for="customerEmail">
+          <i class="fas fa-envelope" style="color: #f048c6;"></i>
+          Enter your email address
+        </label>
+        <input type="email" id="customerEmail" placeholder="example@gmail.com" style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 8px; font-size: 15px;">
+        <div class="email-note">
+          <i class="fas fa-info-circle"></i> Order confirmation will be sent to this email
+        </div>
+      </div>
+    </div>
+    
     <div class="form-group">
       <label for="address">Address</label>
       <textarea id="address" placeholder="Enter your complete address"></textarea>
@@ -513,39 +533,39 @@ header{position:sticky;top:0;z-index:999;padding:10px}
     
     <div class="form-group">
       <label for="detail">Detail</label>
-      <textarea id="detail" placeholder="Enter order details (size, color, quantity, etc.)"></textarea>
+      <textarea id="detail" placeholder="Enter order details (video length, poster size, design requirements, etc.)"></textarea>
     </div>
     
     <div class="form-group">
-      <label>Upload Kpay Payment Proof (Photo)</label>
-      <div class="file-upload-container" id="fileUploadContainer" onclick="document.getElementById('fileInput').click()">
-        <div class="file-upload-icon">
-          <i class="fas fa-cloud-upload-alt"></i>
+      <label>Kpay Transaction Number</label>
+      <div class="kpay-transaction-container">
+        <label for="kpayTransaction">
+          <i class="fas fa-money-bill-wave" style="color: #f048c6;"></i>
+          Enter your Kpay transaction number
+        </label>
+        <input type="text" id="kpayTransaction" placeholder="e.g., KP123456789ABC" style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 8px; font-size: 15px;">
+        <div class="kpay-note">
+          <i class="fas fa-info-circle"></i> Please enter the transaction number from your Kpay receipt
         </div>
-        <div class="file-upload-text">
-          Click to upload or drag and drop
-        </div>
-        <div class="file-upload-btn">Choose File</div>
-        <div id="fileName">No file chosen</div>
       </div>
-      <input type="file" id="fileInput" accept="image/*" onchange="handleFileSelect(event)">
     </div>
     
     <div id="successMessage" class="success-message">
       <i class="fas fa-check-circle"></i> Order submitted successfully! You will receive a confirmation email shortly.
     </div>
     
-    <!-- FormSubmit form -->
+    <!-- FormSubmit form - ဒီမှာ email field ကိုလည်း ထည့်ပေးထားတယ် -->
     <form id="orderEmailForm" action="https://formsubmit.co/founderbylin@gmail.com" method="POST" style="display: none;">
-      <input type="hidden" name="_subject" value="New Order from GES Store">
+      <input type="hidden" name="_subject" value="New Order from TED Store">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_autoresponse" value="Thank you for your order! We have received your order details and will contact you shortly.">
       <input type="hidden" name="name" id="emailName">
+      <input type="hidden" name="email" id="emailCustomerEmail"> <!-- NEW: Email field -->
       <input type="hidden" name="address" id="emailAddress">
       <input type="hidden" name="phone" id="emailPhone">
       <input type="hidden" name="order_details" id="emailDetail">
-      <input type="hidden" name="payment_proof" id="emailFile">
+      <input type="hidden" name="kpay_transaction" id="emailKpayTransaction">
       <input type="hidden" name="kpay_number" value="09794907619">
     </form>
     
@@ -557,7 +577,13 @@ header{position:sticky;top:0;z-index:999;padding:10px}
       <h3>Payment Information</h3>
       <p>Please send payment to the following Kpay number:</p>
       <div class="kpay-number">Kpay - 09794907619</div>
-      <p class="payment-note">After payment, please upload the screenshot as proof of payment. Your order will be processed after we verify your payment.</p>
+      <p class="payment-note">After payment, please enter your Kpay transaction number above. Your order will be processed after we verify your payment.</p>
+      <p style="margin-top: 15px; color: #f048c6; font-weight: 600;">
+        <i class="fas fa-envelope"></i> Order details will be sent to: founderbylin@gmail.com
+      </p>
+      <p style="margin-top: 10px; font-size: 13px; color: #333;">
+        <i class="fas fa-user-check"></i> Customer's email will be included in the order notification
+      </p>
     </div>
   </div>
 </div>
@@ -625,50 +651,6 @@ function closePortal(){
   document.getElementById('portalPage').classList.remove('show');
 }
 
-function handleFileSelect(event) {
-  const fileInput = event.target;
-  const fileNameDisplay = document.getElementById('fileName');
-  const container = document.getElementById('fileUploadContainer');
-  
-  if (fileInput.files.length > 0) {
-    const file = fileInput.files[0];
-    fileNameDisplay.textContent = `Selected: ${file.name} (${(file.size / 1024).toFixed(2)} KB)`;
-    fileNameDisplay.style.color = "#27ae60";
-    container.style.borderColor = "#27ae60";
-    container.style.background = "rgba(39, 174, 96, 0.05)";
-  } else {
-    fileNameDisplay.textContent = "No file chosen";
-    fileNameDisplay.style.color = "#333";
-    container.style.borderColor = "#ddd";
-    container.style.background = "#f9f9f9";
-  }
-}
-
-// Drag and drop functionality
-const fileUploadContainer = document.getElementById('fileUploadContainer');
-const fileInput = document.getElementById('fileInput');
-
-fileUploadContainer.addEventListener('dragover', function(e) {
-  e.preventDefault();
-  this.classList.add('dragover');
-});
-
-fileUploadContainer.addEventListener('dragleave', function(e) {
-  e.preventDefault();
-  this.classList.remove('dragover');
-});
-
-fileUploadContainer.addEventListener('drop', function(e) {
-  e.preventDefault();
-  this.classList.remove('dragover');
-  
-  if (e.dataTransfer.files.length) {
-    fileInput.files = e.dataTransfer.files;
-    const event = new Event('change');
-    fileInput.dispatchEvent(event);
-  }
-});
-
 function showLoading(show) {
   const submitBtn = document.getElementById('submitBtn');
   const submitText = document.getElementById('submitText');
@@ -685,24 +667,34 @@ function showLoading(show) {
 function generateOrderId() {
   const timestamp = Date.now();
   const random = Math.floor(Math.random() * 1000);
-  return `GES-${timestamp.toString().slice(-6)}${random.toString().padStart(3, '0')}`;
+  return `TED-${timestamp.toString().slice(-6)}${random.toString().padStart(3, '0')}`;
 }
 
 function submitOrder(){
   const name = document.getElementById('name').value;
+  const email = document.getElementById('customerEmail').value; // NEW: Get email
   const address = document.getElementById('address').value;
   const phone = document.getElementById('phone').value;
   const detail = document.getElementById('detail').value;
-  const fileInput = document.getElementById('fileInput');
+  const kpayTransaction = document.getElementById('kpayTransaction').value;
   const successMessage = document.getElementById('successMessage');
   
-  if(!name || !address || !phone || !detail) {
+  // NEW: Validate email
+  if(!name || !email || !address || !phone || !detail || !kpayTransaction) {
     alert('Please fill in all required fields before placing order.');
     return;
   }
   
-  if(fileInput.files.length === 0) {
-    alert('Please upload Kpay payment proof photo before placing order.');
+  // Validate email format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+  
+  // Validate Kpay transaction number format
+  if (kpayTransaction.trim().length < 5) {
+    alert('Please enter a valid Kpay transaction number.');
     return;
   }
   
@@ -725,21 +717,19 @@ function submitOrder(){
     // Generate order ID
     const orderId = generateOrderId();
     
-    // Get file info
-    const fileName = fileInput.files[0] ? fileInput.files[0].name : 'No file uploaded';
-    
-    // Prepare data for FormSubmit
+    // Prepare data for FormSubmit - ဒီမှာ email ကိုလည်း ထည့်ပေးထားတယ်
     document.getElementById('emailName').value = name;
+    document.getElementById('emailCustomerEmail').value = email; // NEW: Set email
     document.getElementById('emailAddress').value = address;
     document.getElementById('emailPhone').value = phone;
     document.getElementById('emailDetail').value = detail;
-    document.getElementById('emailFile').value = fileName;
+    document.getElementById('emailKpayTransaction').value = kpayTransaction;
     
     // Send email via FormSubmit
     const emailForm = document.getElementById('orderEmailForm');
     
-    // Add order date and ID to the message
-    const additionalInfo = `\n\nOrder ID: ${orderId}\nOrder Date: ${orderDate}`;
+    // Add order date, ID, and email to the message
+    const additionalInfo = `\n\nOrder ID: ${orderId}\nOrder Date: ${orderDate}\nCustomer Email: ${email}\nKpay Transaction: ${kpayTransaction}`;
     document.getElementById('emailDetail').value = detail + additionalInfo;
     
     // Submit the form
@@ -748,29 +738,27 @@ function submitOrder(){
       
       // Show success message
       setTimeout(() => {
-        successMessage.innerHTML = '<i class="fas fa-check-circle"></i> Order submitted successfully!';
+        successMessage.innerHTML = '<i class="fas fa-check-circle"></i> Order submitted successfully! Check your email for confirmation.';
         
         // Show thank you message
         setTimeout(() => {
           document.getElementById('orderForm').style.display = 'none';
-          document.getElementById('orderId').textContent = orderId;
           
           // Clear form
           document.getElementById('name').value = '';
+          document.getElementById('customerEmail').value = ''; // NEW: Clear email
           document.getElementById('address').value = '';
           document.getElementById('phone').value = '';
           document.getElementById('detail').value = '';
-          document.getElementById('fileName').textContent = 'No file chosen';
-          document.getElementById('fileUploadContainer').style.borderColor = '#ddd';
-          document.getElementById('fileUploadContainer').style.background = '#f9f9f9';
-          fileInput.value = '';
+          document.getElementById('kpayTransaction').value = '';
           
           showLoading(false);
           
           // Close portal after form reset
           setTimeout(() => {
             closePortal();
-          }, 1000);
+            successMessage.classList.remove('show');
+          }, 2000);
         }, 1000);
       }, 1000);
     }, 500);
